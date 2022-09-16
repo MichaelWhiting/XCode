@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="PfD-NR-cW6">
             <objects>
-                <viewController id="LcL-Bj-12T" sceneMemberID="viewController">
+                <viewController id="LcL-Bj-12T" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rKe-ti-noF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log In"/>
                                 <connections>
-                                    <segue destination="uau-qs-sQl" kind="show" id="w5j-5X-O1B"/>
+                                    <segue destination="uau-qs-sQl" kind="presentation" id="w5j-5X-O1B"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0z-fn-iE9">
@@ -67,6 +67,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eWZ-KY-Uud"/>
+                    <connections>
+                        <outlet property="usernameTextField" destination="dh2-qD-cFA" id="PbJ-UQ-ema"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAB-9F-nWZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="lEO-B5-KC7" userLabel="Exit" sceneMemberID="exit"/>
@@ -76,14 +79,14 @@
         <!--View Controller-->
         <scene sceneID="YTm-uS-2b9">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="uau-qs-sQl" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="uau-qs-sQl" customClass="ViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="khx-QZ-xnU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="lrF-Kp-gtz"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VC9-SK-ScY"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="VC9-SK-ScY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zHp-9M-pd0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
