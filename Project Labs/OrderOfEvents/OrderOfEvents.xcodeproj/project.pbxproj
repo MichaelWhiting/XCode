@@ -16,6 +16,8 @@
 		6E978AA128D8BAA9001E3905 /* OrderOfEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E978AA028D8BAA9001E3905 /* OrderOfEventsTests.swift */; };
 		6E978AAB28D8BAA9001E3905 /* OrderOfEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E978AAA28D8BAA9001E3905 /* OrderOfEventsUITests.swift */; };
 		6E978AAD28D8BAA9001E3905 /* OrderOfEventsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E978AAC28D8BAA9001E3905 /* OrderOfEventsUITestsLaunchTests.swift */; };
+		6E978ABA28D8BB98001E3905 /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E978AB928D8BB98001E3905 /* MiddleViewController.swift */; };
+		6E978ABC28D8BBB2001E3905 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E978ABB28D8BBB2001E3905 /* LastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6E978AA628D8BAA9001E3905 /* OrderOfEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrderOfEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E978AAA28D8BAA9001E3905 /* OrderOfEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOfEventsUITests.swift; sourceTree = "<group>"; };
 		6E978AAC28D8BAA9001E3905 /* OrderOfEventsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOfEventsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6E978AB928D8BB98001E3905 /* MiddleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
+		6E978ABB28D8BBB2001E3905 /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				6E978A8B28D8BAA8001E3905 /* SceneDelegate.swift */,
 				6E978A8D28D8BAA8001E3905 /* ViewController.swift */,
 				6E978A8F28D8BAA8001E3905 /* Main.storyboard */,
+				6E978AB928D8BB98001E3905 /* MiddleViewController.swift */,
+				6E978ABB28D8BBB2001E3905 /* LastViewController.swift */,
 				6E978A9228D8BAA9001E3905 /* Assets.xcassets */,
 				6E978A9428D8BAA9001E3905 /* LaunchScreen.storyboard */,
 				6E978A9728D8BAA9001E3905 /* Info.plist */,
@@ -259,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E978A8E28D8BAA8001E3905 /* ViewController.swift in Sources */,
+				6E978ABC28D8BBB2001E3905 /* LastViewController.swift in Sources */,
 				6E978A8A28D8BAA8001E3905 /* AppDelegate.swift in Sources */,
 				6E978A8C28D8BAA8001E3905 /* SceneDelegate.swift in Sources */,
+				6E978ABA28D8BB98001E3905 /* MiddleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
