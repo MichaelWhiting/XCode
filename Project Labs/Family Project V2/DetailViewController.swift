@@ -9,10 +9,37 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var detailImageView: UIImageView!
+    @IBOutlet weak var detailText: UILabel!
+    var textData: String?
+    var person: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        detailText.text = textData
+        detailImageView.image = UIImage(named: person!)
+        detailText.layer.masksToBounds = true
+        detailText.layer.cornerRadius = 10
+        switch person {
+            case "Jennifer":
+                detailImageView.backgroundColor = .cyan
+                detailText.backgroundColor = .cyan
+            case "Karl":
+                detailImageView.backgroundColor = .orange
+                detailText.backgroundColor = .orange
+            case "Sydney":
+                detailImageView.backgroundColor = .green
+                detailText.backgroundColor = .green
+            case "Natalie":
+                detailImageView.backgroundColor = .systemPink
+                detailText.backgroundColor = .systemPink
+            case "Michael":
+                detailImageView.backgroundColor = .red
+                detailText.backgroundColor = .red
+            default:
+                detailImageView.backgroundColor = .gray
+                detailText.backgroundColor = .gray
+        }
     }
     
 

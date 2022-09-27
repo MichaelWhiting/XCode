@@ -16,6 +16,7 @@
 		6ED0F89028E1FB7A006F8CDA /* Family_Project_V2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0F88F28E1FB7A006F8CDA /* Family_Project_V2Tests.swift */; };
 		6ED0F89A28E1FB7A006F8CDA /* Family_Project_V2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0F89928E1FB7A006F8CDA /* Family_Project_V2UITests.swift */; };
 		6ED0F89C28E1FB7A006F8CDA /* Family_Project_V2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0F89B28E1FB7A006F8CDA /* Family_Project_V2UITestsLaunchTests.swift */; };
+		6ED0F8A928E1FD01006F8CDA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED0F8A828E1FD01006F8CDA /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		6ED0F89528E1FB7A006F8CDA /* Family Project V2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Family Project V2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED0F89928E1FB7A006F8CDA /* Family_Project_V2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family_Project_V2UITests.swift; sourceTree = "<group>"; };
 		6ED0F89B28E1FB7A006F8CDA /* Family_Project_V2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Family_Project_V2UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6ED0F8A828E1FD01006F8CDA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		6ED0F86C28E1FB79006F8CDA = {
 			isa = PBXGroup;
 			children = (
+				6ED0F8A828E1FD01006F8CDA /* DetailViewController.swift */,
 				6ED0F87728E1FB79006F8CDA /* Family Project V2 */,
 				6ED0F88E28E1FB7A006F8CDA /* Family Project V2Tests */,
 				6ED0F89828E1FB7A006F8CDA /* Family Project V2UITests */,
@@ -261,6 +264,7 @@
 				6ED0F87D28E1FB79006F8CDA /* ViewController.swift in Sources */,
 				6ED0F87928E1FB79006F8CDA /* AppDelegate.swift in Sources */,
 				6ED0F87B28E1FB79006F8CDA /* SceneDelegate.swift in Sources */,
+				6ED0F8A928E1FD01006F8CDA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
