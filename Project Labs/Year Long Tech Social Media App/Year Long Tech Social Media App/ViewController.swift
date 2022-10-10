@@ -14,11 +14,17 @@ class ViewController: UIViewController, backToMainVC {
     @IBOutlet weak var aboutLabel: UILabel!
     @IBOutlet weak var aboutInfoLabel: UILabel!
     @IBOutlet var mainViewBackground: UIView!
+    @IBOutlet weak var browsePostsButton: UIButton!
+    @IBOutlet weak var feedButton: UIButton!
+    @IBOutlet weak var createPostButton: UIButton!
     
     var darkMode = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        browsePostsButton.layer.cornerRadius = browsePostsButton.frame.height / 2.4
+        feedButton.layer.cornerRadius = feedButton.frame.height / 2.4
+        createPostButton.layer.cornerRadius = createPostButton.frame.height / 2.4
         let isDarkMode = UserDefaults.standard.bool(forKey: "setDarkMode")
         if isDarkMode {
             print("Should be on dark mode")

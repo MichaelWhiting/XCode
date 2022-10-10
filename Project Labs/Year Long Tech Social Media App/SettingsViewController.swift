@@ -29,8 +29,6 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         let switchOn = UserDefaults.standard.bool(forKey: "switchState")
         switchChangeBackground(on: switchOn)
-        print("Switch on is \(switchOn)")
-
     }
     
     @IBAction func setUsernameButton(_ sender: UIButton) {
@@ -69,7 +67,6 @@ class SettingsViewController: UIViewController {
     @IBAction func darkModeSwitchChanged(_ sender: UISwitch) {
         if darkModeSwitch.isOn {
             UserDefaults.standard.set(sender.isOn, forKey: "switchState")
-            print("set to true")
             switchChangeBackground(on: true)
             if self.delegate != nil {
                 let dataToSend = darkModeSwitch.isOn
@@ -78,7 +75,6 @@ class SettingsViewController: UIViewController {
             }
         } else {
             UserDefaults.standard.set(sender.isOn, forKey: "switchState")
-            print("set to false")
             switchChangeBackground(on: false)
             if self.delegate != nil {
                 let dataToSend = darkModeSwitch.isOn
@@ -87,14 +83,4 @@ class SettingsViewController: UIViewController {
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
