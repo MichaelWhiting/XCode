@@ -17,7 +17,7 @@ class HeartRateReceiver {
     var currentHR: Int? {
         didSet {
             if let currentHR = currentHR {
-                self.delegate?.heartRateUpdated(bmp: currentHR)
+                delegate?.heartRateUpdated(bmp: currentHR)
                 print("The most recent heart rate reading is \(currentHR).")
             } else {
                 print("Looks like we can't pick up a heart rate.")
