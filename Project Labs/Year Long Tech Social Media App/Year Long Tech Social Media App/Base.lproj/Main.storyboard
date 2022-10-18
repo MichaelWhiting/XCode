@@ -8,6 +8,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Create Post-->
+        <scene sceneID="jHk-qU-4a7">
+            <objects>
+                <viewController id="PTC-CN-6da" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sRx-Ok-a8P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weI-xY-6ux">
+                                <rect key="frame" x="81" y="106" width="253" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Create New Post"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RsA-dV-bIY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Post" id="Rzg-Xx-P4a"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oR9-6f-3Bh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2421.739130434783" y="750"/>
+        </scene>
         <!--Search-->
         <scene sceneID="1VV-1i-Lys">
             <objects>
@@ -22,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J4Z-KV-DPw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1735" y="747"/>
+            <point key="canvasLocation" x="1055" y="750"/>
         </scene>
         <!--Feed-->
         <scene sceneID="D1S-BL-wzl">
@@ -38,7 +63,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nj8-Sk-EuE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2422" y="747"/>
+            <point key="canvasLocation" x="1735" y="750"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -138,6 +163,9 @@
                                 <color key="backgroundColor" red="0.3269942555" green="0.32415347350000001" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <segue destination="PTC-CN-6da" kind="show" id="lMI-Nu-VRi"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
