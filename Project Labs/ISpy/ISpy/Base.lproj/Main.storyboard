@@ -16,42 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uao-Lg-bhv">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvJ-HR-2Hx">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIk-zZ-G7k">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gear.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="e1I-Xg-S4m">
-                                                <rect key="frame" x="87" y="271.5" width="240" height="274"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3eq-yK-SeP">
+                                        <rect key="frame" x="0.0" y="0.5" width="414" height="817"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sIk-zZ-G7k" firstAttribute="leading" secondItem="Uao-Lg-bhv" secondAttribute="leading" id="c2i-uR-3tv"/>
-                                    <constraint firstAttribute="trailing" secondItem="sIk-zZ-G7k" secondAttribute="trailing" id="rag-qJ-kbN"/>
-                                    <constraint firstAttribute="bottom" secondItem="sIk-zZ-G7k" secondAttribute="bottom" id="u0m-mv-eRx"/>
-                                    <constraint firstItem="sIk-zZ-G7k" firstAttribute="top" secondItem="Uao-Lg-bhv" secondAttribute="top" id="xJU-PU-rqk"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="trailing" secondItem="o8X-3y-EaZ" secondAttribute="trailing" id="8Uj-sK-Pm8"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="leading" secondItem="o8X-3y-EaZ" secondAttribute="leading" id="Kbv-Fo-O1T"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="top" secondItem="o8X-3y-EaZ" secondAttribute="top" id="LgO-3m-QLK"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="leading" secondItem="DNr-mO-DGV" secondAttribute="leading" id="S1O-Vf-UGj"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="bottom" secondItem="o8X-3y-EaZ" secondAttribute="bottom" id="ZBg-Wv-40n"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="top" secondItem="DNr-mO-DGV" secondAttribute="top" id="jUB-fr-eNK"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="bottom" secondItem="DNr-mO-DGV" secondAttribute="bottom" constant="818" id="sAm-rN-rHn"/>
+                                    <constraint firstItem="3eq-yK-SeP" firstAttribute="trailing" secondItem="DNr-mO-DGV" secondAttribute="trailing" constant="414" id="upr-DJ-xKh"/>
                                 </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="DNr-mO-DGV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="o8X-3y-EaZ"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Uao-Lg-bhv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="40K-mP-soL"/>
-                            <constraint firstItem="Uao-Lg-bhv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="G4j-A6-dZj"/>
-                            <constraint firstItem="Uao-Lg-bhv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VEW-S7-FiK"/>
-                            <constraint firstItem="Uao-Lg-bhv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gdu-YA-69I"/>
-                            <constraint firstItem="sIk-zZ-G7k" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.912946" id="uDG-1V-bWz"/>
-                            <constraint firstItem="sIk-zZ-G7k" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="wiV-dg-Bg8"/>
+                            <constraint firstItem="PvJ-HR-2Hx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="elJ-B6-0ga"/>
+                            <constraint firstItem="PvJ-HR-2Hx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fE4-gi-ikx"/>
+                            <constraint firstItem="PvJ-HR-2Hx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lYD-fx-gHT"/>
+                            <constraint firstItem="PvJ-HR-2Hx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="t9H-9j-I2g"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="e1I-Xg-S4m" id="4aQ-IU-IcV"/>
-                        <outlet property="scrollView" destination="Uao-Lg-bhv" id="o10-hw-UQ5"/>
+                        <outlet property="imageView" destination="3eq-yK-SeP" id="apj-X3-sVa"/>
+                        <outlet property="scrollView" destination="PvJ-HR-2Hx" id="aLW-VY-I4a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -60,7 +57,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="gear.circle" catalog="system" width="128" height="121"/>
+        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

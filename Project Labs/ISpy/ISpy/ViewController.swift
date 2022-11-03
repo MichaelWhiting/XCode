@@ -22,7 +22,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func updateZoomFor(size: CGSize) {
-        let widthScale = size.width
+        let widthScale = size.width 
         let heightScale = size.height
         let scale = min(widthScale, heightScale)
         scrollView.minimumZoomScale = scale
@@ -30,6 +30,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         updateZoomFor(size: view.bounds.size)
     }
 
