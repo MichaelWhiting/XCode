@@ -1,5 +1,4 @@
 import UIKit
-
 func multiples(_ num: Int, _ limit: Int) -> [Int] {
     return Array(num...limit).filter { $0 % num == 0 }
 }
@@ -7,7 +6,7 @@ func multiples(_ num: Int, _ limit: Int) -> [Int] {
 print(multiples(2,100))
 
 
-// this version is 2x faster-
+// this version is 2x faster
 func multiples2(_ num: Int, _ limit: Int) -> [Int] {
     var returnArr = [Int]()
     var index = num
@@ -22,4 +21,5 @@ func multiples2(_ num: Int, _ limit: Int) -> [Int] {
     return returnArr
 }
 
-print(multiples2(2, 100))
+print(multiples2(2, 6))
+

@@ -310,16 +310,21 @@
             </objects>
             <point key="canvasLocation" x="8356.5217391304359" y="348.88392857142856"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Social Media App Tab Bar Controller-->
         <scene sceneID="dq0-gn-oxe">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DKZ-le-zg7" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="DKZ-le-zg7" customClass="SocialMediaAppTabBarController" customModule="YearLongSocialMediaAppPart2" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mKG-Wi-AKq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="selectedIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="07L-6I-gYq" kind="relationship" relationship="viewControllers" id="oje-vP-nGG"/>
                         <segue destination="8nL-9J-chI" kind="relationship" relationship="viewControllers" id="5TO-fk-Hfs"/>
@@ -370,7 +375,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="18g-Ma-Hnn"/>
+        <segue reference="5IT-yz-cg0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="227px-Linear_Grayscale_Gradient_(Vertical).svg" width="227" height="1022"/>

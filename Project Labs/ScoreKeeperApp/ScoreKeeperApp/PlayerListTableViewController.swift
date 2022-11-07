@@ -1,78 +1,77 @@
 //
-//  PostsTableViewController.swift
-//  YearLongSocialMediaAppPart2
+//  PlayerListTableViewController.swift
+//  ScoreKeeperApp
 //
-//  Created by Michael Whiting on 11/2/22.
+//  Created by Michael Whiting on 11/3/22.
 //
 
 import UIKit
 
-class PostsTableViewController: UITableViewController, CreatePostTableViewControllerDelegate {
+class PlayerListTableViewController: UITableViewController, AddPlayerTableViewControllerDelegate, PlayerViewTableCellDelegate {
+    func updateColor(_ controller: PlayerTableViewCell, updateColor color: UIColor, path indexPath: Int) {
+        print("This function ran!")
+        print(players[indexPath])
+        players[indexPath].color = color
+    }
     
-    func addPost(_ controller: CreatePostTableViewController, addPost newPost: Post) {
-        posts.append(newPost)
+    func stepperChanged(_ controller: PlayerTableViewCell, sortPlayer changed: Bool, playerScore updatedValue: Int, path indexPathRow: Int) {
+        if changed {
+            players[indexPathRow].score = updatedValue
+            sortScores()
+            tableView.reloadData()
+        }
+    }
+    
+
+  
+
+    func addPlayer(_ controller: AddPlayerTableViewController, addPlayer newPlayer: Player) {
+        players.append(newPlayer)
+        sortScores()
         tableView.reloadData()
     }
-
-    var post: Post?
-
-    var posts: [Post] = [Post(username: "Michael", text: "This is the paragraph", date: Date()),Post(username: "John", text: "This is a text", date: Date())]
     
+    var players: [Player] = [Player(name: "Player 1", score: 10),Player(name: "Player 2", score: 32),Player(name: "Player 3", score: 5)]
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.reloadData()
     }
 
-    @IBSegueAction func segueToCreateEdit(_ coder: NSCoder, sender: Any?) -> CreatePostTableViewController? {
-        if let cell = sender as? UITableViewCell,
-           let indexPath = tableView.indexPath(for: cell) {
-            let postToEdit = posts[indexPath.row]
-            return CreatePostTableViewController(coder: coder, post: postToEdit)
-        } else {
-            let createPost = CreatePostTableViewController(coder: coder, post: nil)
-            createPost?.delegate = self
-            return createPost
-        }
+    func sortScores() {
+        players.sort { $0.score > $1.score }
     }
     
-    @IBAction func unwindFromSave(segue: UIStoryboardSegue) {
-        guard segue.identifier == "saveUnwind", let sourceVC = segue.source as? CreatePostTableViewController, let post = sourceVC.post else { return }
-        
-        if let selectedIndexPath = tableView.indexPathForSelectedRow {
-            posts[selectedIndexPath.row] = post
-            tableView.reloadRows(at: [selectedIndexPath], with: .none)
-        }
+    @IBSegueAction func addPlayer(_ coder: NSCoder, sender: Any?) -> AddPlayerTableViewController? {
+        let addPlayerVC = AddPlayerTableViewController(coder: coder)
+        addPlayerVC?.delegate = self
+        return addPlayerVC
     }
-    
-    
-    
-    
     // MARK: - Table view data source
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return posts.count
+        return players.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostTableViewCell
-
-        let post = posts[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerTableViewCell
         
-        cell.updatePost(with: post)
-        cell.showsReorderControl = true
+        let player = players[indexPath.row]
 
+        cell.delegate = self
+        cell.updateCell(with: player)
+        
         return cell
     }
-
     
-    
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
 
     /*
