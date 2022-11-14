@@ -9,8 +9,8 @@ import UIKit
 
 protocol AddPlayerTableViewControllerDelegate: AnyObject {
     func addPlayer(_ controller: AddPlayerTableViewController, addPlayer newPlayer: Player)
-    
 }
+
 class AddPlayerTableViewController: UITableViewController {
     
     var player: Player?
@@ -18,9 +18,11 @@ class AddPlayerTableViewController: UITableViewController {
     
     @IBOutlet weak var playerTextField: UITextField!
     @IBOutlet weak var scoreTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton.isEnabled = false
     }
 
     @IBAction func saveButtonPressed(_ sender: Any) {
@@ -32,9 +34,20 @@ class AddPlayerTableViewController: UITableViewController {
         dismiss(animated: true)
     }
     
+    func updateSaveButton() {
+        guard let score = scoreTextField.text else { return }
+        guard playerTextField.text != nil, Int(score) != nil else { return }
+        saveButton.isEnabled = true
+    }
+    
     @IBAction func cancelButtonPressed(_ sender: Any) {
         dismiss(animated: true)
     }
+    
+    @IBAction func textFieldChanged(_ sender: Any) {
+        updateSaveButton()
+    }
+ 
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

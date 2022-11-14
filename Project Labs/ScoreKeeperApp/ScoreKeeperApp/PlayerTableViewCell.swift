@@ -26,13 +26,18 @@ class PlayerTableViewCell: UITableViewCell, UIColorPickerViewControllerDelegate 
             print("Error: The cell does not have a TableView superclass")
             return nil
         }
+        
         let indexPath = superView.indexPath(for: self)
         return indexPath
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        playerColorTeam.layer.cornerRadius = playerColorTeam.frame.width/2
+        playerColorTeam.layer.borderWidth = 1
+        playerColorTeam.layer.masksToBounds = false
+        playerColorTeam.layer.borderColor = UIColor.black.cgColor
+        playerColorTeam.layer.cornerRadius = playerColorTeam.frame.height/2
+        playerColorTeam.clipsToBounds = true
     }
 
     func updateCell(with player: Player) {
