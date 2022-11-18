@@ -10,6 +10,7 @@ import UIKit
 protocol GameSettingsTableViewCellDelegate: AnyObject {
     func sortedByChanged(_ controller: GameSettingsTableViewCell, selected: Int, row: Int)
     func whoWinsChanged(_ controller: GameSettingsTableViewCell, selected: Int, row: Int)
+    func stepperChanged(_ controller: GameSettingsTableViewCell, value: Int, row: Int)
 }
 
 class GameSettingsTableViewCell: UITableViewCell {
@@ -18,17 +19,24 @@ class GameSettingsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var sortedBy: UISegmentedControl!
     @IBOutlet weak var whoWins: UISegmentedControl!
+    @IBOutlet weak var roundStepper: UIStepper!
+    @IBOutlet weak var roundLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        guard let text = Int(roundLabel.text!) else { return }
+        roundStepper.value = Double(text)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func updateSettings(sortedBy: Int, whoWins: Int) {
+    func updateSettings(sortedBy: Int, whoWins: Int, currentRound: Int) {
         self.sortedBy.selectedSegmentIndex = sortedBy
         self.whoWins.selectedSegmentIndex = whoWins
+        self.roundLabel.text = String(currentRound)
+        self.roundStepper.value = Double(currentRound)
         print("updated settings")
     }
     
@@ -41,6 +49,12 @@ class GameSettingsTableViewCell: UITableViewCell {
         return indexPath
     }
     
+    
+    @IBAction func stepperChanged(_ sender: Any) {
+        let row = getIndexPath()?.row
+        roundLabel.text = String(Int(roundStepper.value))
+        delegate?.stepperChanged(self, value: Int(roundLabel.text!)!, row: row!)
+    }
     
     @IBAction func sortedByChanged(_ sender: UISegmentedControl) {
         let selected = sender.selectedSegmentIndex

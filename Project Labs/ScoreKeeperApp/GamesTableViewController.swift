@@ -7,23 +7,14 @@
 
 import UIKit
 
-class GamesTableViewController: UITableViewController, AddGameTableViewControllerDelegate, PlayerListTableViewControllerDelegate, GameSettingsTableViewCellDelegate {
-    
-    func sortedByChanged(_ controller: GameSettingsTableViewCell, selected: Int, row: Int) {
-        games[row].sortBy = selected
-        tableView.reloadData()
-    }
-    
-    func whoWinsChanged(_ controller: GameSettingsTableViewCell, selected: Int, row: Int) {
-        games[row].whoWins = selected
-        tableView.reloadData()
-    }
-    
+class GamesTableViewController: UITableViewController, AddGameTableViewControllerDelegate, PlayerListTableViewControllerDelegate {
+
     func updatingGameData(_ controller: PlayerListTableViewController, playerCount: Int, currentRound: Int, currentWinner: Player, indexPath: IndexPath, sortedBy: Int, whoWins: Int) {
         games[indexPath.row].playerCount = playerCount
         games[indexPath.row].currentWinner = currentWinner.name
         games[indexPath.row].sortBy = sortedBy
         games[indexPath.row].whoWins = whoWins
+        games[indexPath.row].currentRound = currentRound
         tableView.reloadData()
         print("updated the data")
     }
@@ -57,11 +48,11 @@ class GamesTableViewController: UITableViewController, AddGameTableViewControlle
         print("section \(indexPath.section)")
         print("row \(indexPath.row)")
         if games[indexPath.row].players != nil {
-            let playerListVC = PlayerListTableViewController(coder: coder, players: games[indexPath.row].players ?? [], indexPath: indexPath, sortedBy: games[indexPath.row].sortBy, whoWins: games[indexPath.row].whoWins)
+            let playerListVC = PlayerListTableViewController(coder: coder, players: games[indexPath.row].players ?? [], indexPath: indexPath, sortedBy: games[indexPath.row].sortBy, whoWins: games[indexPath.row].whoWins, currentRound: games[indexPath.row].currentRound)
             playerListVC?.delegate = self
             return playerListVC
         } else {
-            let playerListVC = PlayerListTableViewController(coder: coder, players: games[indexPath.row].players ?? [], indexPath: indexPath, sortedBy: games[indexPath.row].sortBy, whoWins: games[indexPath.row].whoWins)
+            let playerListVC = PlayerListTableViewController(coder: coder, players: games[indexPath.row].players ?? [], indexPath: indexPath, sortedBy: games[indexPath.row].sortBy, whoWins: games[indexPath.row].whoWins, currentRound: games[indexPath.row].currentRound)
             playerListVC?.delegate = self
             return playerListVC
         }

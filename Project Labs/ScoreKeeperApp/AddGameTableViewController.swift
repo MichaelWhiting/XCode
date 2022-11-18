@@ -16,15 +16,12 @@ class AddGameTableViewController: UITableViewController {
     weak var delegate: AddGameTableViewControllerDelegate?
     
     @IBOutlet weak var gameNameTextField: UITextField!
-    @IBOutlet weak var roundCountLabel: UILabel!
-    @IBOutlet weak var roundCountStepper: UIStepper!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var sortedBy: UISegmentedControl!
     @IBOutlet weak var whoWins: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkStepper()
         saveButton.isEnabled = false
         
     }
@@ -33,24 +30,13 @@ class AddGameTableViewController: UITableViewController {
         guard gameNameTextField.text != nil else { return }
         saveButton.isEnabled = true
     }
-    
-    func checkStepper() {
-        if roundCountStepper.value == 0.0 {
-            roundCountStepper.value = 1
-        }
-        roundCountLabel.text = String(Int(roundCountStepper.value))
 
-    }
-    @IBAction func stepperChanged(_ sender: UIStepper) {
-        checkStepper()
-    }
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         guard let gameName = gameNameTextField.text else { return }
-        guard let roundCount = Int(roundCountLabel.text ?? "")  else { return }
         let sortedBy = sortedBy.selectedSegmentIndex
         let whoWins = whoWins.selectedSegmentIndex
-        let newGame = Game(name: gameName, whoWins: whoWins, sortBy: sortedBy, rounds: roundCount, currentRound: 1)
+        let newGame = Game(name: gameName, whoWins: whoWins, sortBy: sortedBy, rounds: 1, currentRound: 1)
         delegate?.addGame(self, game: newGame)
         dismiss(animated: true)
         

@@ -33,6 +33,7 @@ class GameTableViewCell: UITableViewCell {
             playerAmountLabel.text = "\(game.playerCount ?? 0) Player"
         }
     
+        roundLabel.text = "Round: \(game.currentRound)"
         currentWinnerLabel.text = "Winner: \(game.currentWinner ?? "None")"
     }
 }
