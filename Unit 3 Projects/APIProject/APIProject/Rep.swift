@@ -7,13 +7,17 @@
 
 import Foundation
 
+struct RepSearchResults: Codable {
+    let results: [Rep]
+}
+
 struct Rep: Codable {
     var name: String
     var state: String
     var district: String
     var phone: String
     var office: String
-    var website: String
+    var link: String
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -21,7 +25,7 @@ struct Rep: Codable {
         case district = "district"
         case phone = "phone"
         case office = "office"
-        case website = "website"
+        case link = "link"
     }
     
     init(from decoder: Decoder) throws {
@@ -31,7 +35,8 @@ struct Rep: Codable {
         self.district = try container.decode(String.self, forKey: .district)
         self.phone = try container.decode(String.self, forKey: .phone)
         self.office = try container.decode(String.self, forKey: .office)
-        self.website = try container.decode(String.self, forKey: .website)
+        self.link = try container.decode(String.self, forKey: .link)
     }
     
 }
+

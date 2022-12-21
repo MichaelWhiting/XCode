@@ -87,8 +87,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Political Party, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-7f-AVW">
-                                            <rect key="frame" x="36" y="45" width="151" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="District, State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TF1-7f-AVW">
+                                            <rect key="frame" x="36" y="45" width="104" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -130,39 +130,45 @@
             </objects>
             <point key="canvasLocation" x="1623.6641221374045" y="-80.281690140845072"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="cGe-iH-L50">
-            <objects>
-                <viewController id="Xgw-s6-Pds" sceneMemberID="viewController">
-                    <searchBar key="view" contentMode="redraw" id="Quh-60-Ydb">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                        <textInputTraits key="textInputTraits"/>
-                        <connections>
-                            <outlet property="delegate" destination="Xgw-s6-Pds" id="Wi4-gH-8Ou"/>
-                        </connections>
-                    </searchBar>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bgM-jj-UGB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2032.824427480916" y="611.97183098591552"/>
-        </scene>
         <!--Nobel-->
         <scene sceneID="Gqs-4m-WSG">
             <objects>
-                <tableViewController id="aJ0-nj-uvK" sceneMemberID="viewController">
+                <tableViewController id="aJ0-nj-uvK" customClass="NobelTableViewController" customModule="APIProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="BVW-zt-oIH">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search by Year" id="pQL-iu-y1N">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="aJ0-nj-uvK" id="iLV-1f-dom"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BLb-Sk-BmK">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrizeType" rowHeight="55" id="BLb-Sk-BmK" customClass="PrizeTypeTableViewCell" customModule="APIProject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="94" width="393" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BLb-Sk-BmK" id="uwz-X0-Sc6">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="55"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PrizeType" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRQ-BL-ntX">
+                                            <rect key="frame" x="28" y="13.666666666666664" width="95" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="YRQ-BL-ntX" firstAttribute="leading" secondItem="uwz-X0-Sc6" secondAttribute="leadingMargin" constant="8" id="6XT-M3-kLg"/>
+                                        <constraint firstItem="YRQ-BL-ntX" firstAttribute="centerY" secondItem="uwz-X0-Sc6" secondAttribute="centerY" id="qxl-hX-yeS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="prizeTypeLabel" destination="YRQ-BL-ntX" id="fA2-mw-XXq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -171,6 +177,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Nobel" image="trophy" catalog="system" selectedImage="trophy.fill" id="JYw-aX-0jv"/>
+                    <connections>
+                        <outlet property="searchBar" destination="pQL-iu-y1N" id="3gG-j1-IRd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvC-PE-ciz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

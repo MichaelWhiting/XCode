@@ -22,6 +22,10 @@
 		6E27CBB9293A50860061B445 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27CBB8293A50860061B445 /* Dog.swift */; };
 		6E27CBBB293A5B180061B445 /* Rep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27CBBA293A5B180061B445 /* Rep.swift */; };
 		6E27CBBD293A5DDC0061B445 /* RepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27CBBC293A5DDC0061B445 /* RepTableViewCell.swift */; };
+		6E27CBBF293E4E1E0061B445 /* NobelPrizeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27CBBE293E4E1E0061B445 /* NobelPrizeTableViewController.swift */; };
+		6E27CBC3293E4E5A0061B445 /* PrizeWinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27CBC2293E4E5A0061B445 /* PrizeWinner.swift */; };
+		6E27CBC7293E4E910061B445 /* NobelPrize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27CBC6293E4E910061B445 /* NobelPrize.swift */; };
+		6E27CBC9293E52340061B445 /* PrizeTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27CBC8293E52340061B445 /* PrizeTypeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		6E27CBB8293A50860061B445 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
 		6E27CBBA293A5B180061B445 /* Rep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rep.swift; sourceTree = "<group>"; };
 		6E27CBBC293A5DDC0061B445 /* RepTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepTableViewCell.swift; sourceTree = "<group>"; };
+		6E27CBBE293E4E1E0061B445 /* NobelPrizeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrizeTableViewController.swift; sourceTree = "<group>"; };
+		6E27CBC2293E4E5A0061B445 /* PrizeWinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeWinner.swift; sourceTree = "<group>"; };
+		6E27CBC6293E4E910061B445 /* NobelPrize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelPrize.swift; sourceTree = "<group>"; };
+		6E27CBC8293E52340061B445 /* PrizeTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrizeTypeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +119,14 @@
 		6E27CB7D293A41830061B445 /* APIProject */ = {
 			isa = PBXGroup;
 			children = (
+				6E27CBBE293E4E1E0061B445 /* NobelPrizeTableViewController.swift */,
+				6E27CBC2293E4E5A0061B445 /* PrizeWinner.swift */,
+				6E27CBC6293E4E910061B445 /* NobelPrize.swift */,
 				6E27CB7E293A41830061B445 /* AppDelegate.swift */,
 				6E27CB80293A41830061B445 /* SceneDelegate.swift */,
 				6E27CB82293A41830061B445 /* ViewController.swift */,
 				6E27CB84293A41830061B445 /* Main.storyboard */,
+				6E27CBC8293E52340061B445 /* PrizeTypeTableViewCell.swift */,
 				6E27CBB4293A43490061B445 /* DogViewController.swift */,
 				6E27CBB8293A50860061B445 /* Dog.swift */,
 				6E27CBB2293A43260061B445 /* NobelTableViewController.swift */,
@@ -277,13 +289,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E27CB83293A41830061B445 /* ViewController.swift in Sources */,
+				6E27CBC7293E4E910061B445 /* NobelPrize.swift in Sources */,
 				6E27CBB9293A50860061B445 /* Dog.swift in Sources */,
 				6E27CBB1293A43190061B445 /* RepTableViewController.swift in Sources */,
 				6E27CBBB293A5B180061B445 /* Rep.swift in Sources */,
 				6E27CB7F293A41830061B445 /* AppDelegate.swift in Sources */,
+				6E27CBC9293E52340061B445 /* PrizeTypeTableViewCell.swift in Sources */,
+				6E27CBBF293E4E1E0061B445 /* NobelPrizeTableViewController.swift in Sources */,
 				6E27CBB3293A43260061B445 /* NobelTableViewController.swift in Sources */,
 				6E27CB81293A41830061B445 /* SceneDelegate.swift in Sources */,
 				6E27CBBD293A5DDC0061B445 /* RepTableViewCell.swift in Sources */,
+				6E27CBC3293E4E5A0061B445 /* PrizeWinner.swift in Sources */,
 				6E27CBB5293A43490061B445 /* DogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +485,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +517,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

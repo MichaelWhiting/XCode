@@ -176,13 +176,7 @@ class PlayerListTableViewController: UITableViewController, AddPlayerTableViewCo
     }
     
   
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 144
-        } else {
-            return 75
-        }
-    }
+  
     
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {

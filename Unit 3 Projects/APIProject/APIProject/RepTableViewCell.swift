@@ -22,4 +22,14 @@ class RepTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
 
+    func updateInfo(with rep: Rep) {
+        nameLabel.text = rep.name
+        if rep.district != "" {
+            partyStateLabel.text = "District: \(rep.district), \(rep.state)"
+        } else {
+            partyStateLabel.text = rep.state
+        }
+       
+        websiteLabel.text = rep.link
+    }
 }
