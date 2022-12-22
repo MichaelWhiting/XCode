@@ -27,10 +27,9 @@ class OrderConfirmationViewController: UIViewController {
         confirmationLabel.text = "Thank you for your order! Your wait time is approximately \(minutesToPrepare) minutes"
     }
     
-    @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
-        if segue.identifier == "dismissConfirmation" {
-            MenuController.shared.order.menuItems.removeAll()
-        }
+    @IBAction func dismissButtonTapped(_ sender: Any) {
+        MenuController.shared.order.menuItems.removeAll()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     /*
     // MARK: - Navigation

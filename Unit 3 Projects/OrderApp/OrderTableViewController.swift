@@ -20,6 +20,7 @@ class OrderTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        MenuController.shared.updateUserActivity(with: .order)
     }
     
     func uploadOrder() {
